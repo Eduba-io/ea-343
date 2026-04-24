@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>UPAGO x Eduba · Donde la IA encaja en el stack de cobranza</title>
+  <meta name="description" content="Su sitio dice que las reglas de cobranza están A/B testeadas y que UPAGO tiene ISO 27001 y PCI DSS en tres países. Una lectura de dónde la IA encaja, y dónde no." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div data-eduba="banner" style="background:#0a0a0a;color:#f5f5f5;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:0.01em;border-bottom:1px solid #1f1f1f;position:relative;z-index:1000;">
+  <a href="https://eduba.io" target="_blank" rel="noopener" style="color:#f5f5f5;text-decoration:none;font-weight:800;font-size:17px;letter-spacing:-0.02em;line-height:1;">eduba</a>
+  <span style="opacity:0.88;">Prepared by Eduba for UPAGO &mdash; Emerge Americas 2026</span>
+</div>
+
+
+  <!-- Top bar: UPAGO logo + language toggle. No Eduba branding here. -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand-logo" href="https://www.upago.cl/" target="_blank" rel="noopener" aria-label="UPAGO">
+        <img src="logo.svg" alt="UPAGO" />
+      </a>
+      <div class="lang-toggle" role="group" aria-label="Language / Idioma">
+        <button type="button" id="btn-es" aria-pressed="true">ES</button>
+        <button type="button" id="btn-en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">
+        <span class="dot" aria-hidden="true"></span>
+        <span lang-es>Preparado para UPAGO</span>
+        <span lang-en>Prepared for UPAGO</span>
+      </span>
+
+      <h1 class="hero-title">
+        <span lang-es>Una lectura de dónde la IA encaja en el stack de cobranza de UPAGO, <span class="accent">y dónde no</span>.</span>
+        <span lang-en>A read on where AI actually fits in UPAGO's collections stack, <span class="accent">and where it doesn't</span>.</span>
+      </h1>
+
+      <p class="hero-sub">
+        <span lang-es>Chile, México, Colombia. Tres países, un equipo pequeño, ISO 27001 y PCI DSS sobre toda la superficie. La pregunta interesante no es sumar más IA. Es decidir qué capa del problema corresponde a cada parte del sistema.</span>
+        <span lang-en>Chile, Mexico, Colombia. Three countries, a small team, ISO 27001 and PCI DSS across the surface. The interesting question is not adding more AI. It is deciding which layer each part of the system belongs on.</span>
+      </p>
+
+      <div class="hero-meta">
+        <span class="chip solid" lang-es>eMerge Americas 2026</span>
+        <span class="chip solid" lang-en>eMerge Americas 2026</span>
+        <span class="chip" lang-es>30 min con Matt Creamer</span>
+        <span class="chip" lang-en>30 minutes with Matt Creamer</span>
+        <span class="chip" lang-es>Conversación única, no un pitch</span>
+        <span class="chip" lang-en>One conversation, not a pitch</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PITCH BODY: from fit-analysis section 7 -->
+  <section id="read">
+    <div class="container">
+      <div class="section-kicker" lang-es>Apertura</div>
+      <div class="section-kicker" lang-en>Opening</div>
+      <h2 class="section-title">
+        <span lang-es>Lo que vemos desde afuera.</span>
+        <span lang-en>What we see from the outside.</span>
+      </h2>
+
+      <div class="frame">
+        <p lang-es>
+          UPAGO es la primera fintech en LATAM que se posiciona alrededor del
+          aseguramiento de ingresos en vez del checkout, y el producto está en
+          un lugar sensato: cobranza, conciliación, notificaciones, recuperación
+          prejudicial. El sitio público dice que los algoritmos de cobranza están
+          A/B testeados. Las certificaciones (ISO 27001, PCI DSS) son reales y no
+          triviales para un equipo de treinta personas. Expandir en Chile, México
+          y Colombia a esta escala es el problema interesante.
+        </p>
+        <p lang-en>
+          UPAGO is the first LATAM fintech to frame itself around revenue
+          assurance rather than checkout, and the product sits in a sensible
+          place: collections, reconciliation, notifications, prejudicial
+          recovery. The public site says the collection algorithms are A/B
+          tested. The certifications (ISO 27001, PCI DSS) are real and
+          non-trivial for a thirty-person team. Expanding across Chile, Mexico,
+          and Colombia at this headcount is the interesting problem.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAYER MATH -->
+  <section style="background: linear-gradient(180deg, #ffffff 0%, #f5faff 100%);">
+    <div class="container">
+      <div class="section-kicker" lang-es>El encuadre</div>
+      <div class="section-kicker" lang-en>The frame</div>
+      <h2 class="section-title">
+        <span lang-es>La mayoría de los equipos automatizan lo equivocado.</span>
+        <span lang-en>Most teams automate the wrong things.</span>
+      </h2>
+
+      <p style="max-width:72ch;" lang-es>
+        Una plataforma de cobranza suele repartirse así. La pregunta para UPAGO
+        no es si agregar más IA. Es qué piezas del sistema actual están en la
+        capa equivocada, y cuáles serían más baratas, más seguras y más
+        defendibles al moverlas. Un comprador de Serie A lo lee como un foso.
+        Un comprador de compliance lo lee como una trazabilidad de auditoría.
+      </p>
+      <p style="max-width:72ch;" lang-en>
+        A collections platform usually splits like this. The question for UPAGO
+        is not whether to add more AI. It is which pieces of the current system
+        sit in the wrong layer, and which would get cheaper, safer, and more
+        defensible if moved. A Series A buyer reads this as a moat. A
+        compliance buyer reads it as an audit trail.
+      </p>
+
+      <div class="split" role="list">
+        <div class="layer l60" role="listitem">
+          <div class="pct">60%</div>
+          <h3 lang-es>Código tradicional y base de datos</h3>
+          <h3 lang-en>Traditional code and database</h3>
+          <p lang-es>Pasarelas, portal de pago, conciliación bancaria, historial, reportería.</p>
+          <p lang-en>Gateways, payment portal, bank reconciliation, history, reporting.</p>
+          <div class="bar" aria-hidden="true"><span></span></div>
+        </div>
+        <div class="layer l30" role="listitem">
+          <div class="pct">30%</div>
+          <h3 lang-es>Lógica basada en reglas</h3>
+          <h3 lang-en>Rule-based logic</h3>
+          <p lang-es>Superficie regulatoria por país, secuencias de dunning, heurísticas de cobranza.</p>
+          <p lang-en>Country-specific regulatory surface, dunning sequences, collection heuristics.</p>
+          <div class="bar" aria-hidden="true"><span></span></div>
+        </div>
+        <div class="layer l10" role="listitem">
+          <div class="pct">10%</div>
+          <h3 lang-es>Un problema de IA real</h3>
+          <h3 lang-en>A genuine AI problem</h3>
+          <p lang-es>Predicción de morosidad, elección de canal, scoring de riesgo con trazabilidad.</p>
+          <p lang-en>Delinquency prediction, notification-channel choice, risk scoring with provenance.</p>
+          <div class="bar" aria-hidden="true"><span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE + PAPER -->
+  <section>
+    <div class="container">
+      <div class="section-kicker" lang-es>Evidencia</div>
+      <div class="section-kicker" lang-en>Evidence</div>
+      <h2 class="section-title">
+        <span lang-es>Un precedente cercano, y el papel sobre gobernanza.</span>
+        <span lang-en>A close precedent, and the paper on governance.</span>
+      </h2>
+
+      <div class="evidence">
+        <article class="card">
+          <span class="tag" lang-es>Caso · VigilOre</span>
+          <span class="tag" lang-en>Case · VigilOre</span>
+          <h3 lang-es>Compliance en minería, RDC. Sistema multi-agente con trazabilidad por decisión.</h3>
+          <h3 lang-en>Mining compliance, DRC. Multi-agent system with per-decision provenance.</h3>
+          <p lang-es>
+            Reglas por jurisdicción, documentos densos y un auditor que eventualmente
+            pregunta cosas difíciles. La forma del problema se parece a la de UPAGO.
+          </p>
+          <p lang-en>
+            Cross-jurisdiction rules, document-heavy, and an auditor who eventually
+            asks hard questions. The shape of the problem is close to UPAGO's.
+          </p>
+          <div class="metric">
+            160h <span lang-es>de trabajo regulatorio comprimido a menos de 5 minutos.</span>
+            <span lang-en>of regulatory work compressed to under 5 minutes.</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag alt" lang-es>Paper · Ethics Engine</span>
+          <span class="tag alt" lang-en>Paper · Ethics Engine</span>
+          <h3 lang-es>La gobernanza, escrita.</h3>
+          <h3 lang-en>Governance, written up.</h3>
+          <p lang-es>
+            Ethics Engine es una herramienta de evaluación psicométrica para medir
+            patrones ideológicos y morales en LLMs.
+          </p>
+          <p lang-en>
+            Ethics Engine is a psychometric assessment tool for evaluating
+            ideological and moral patterns in LLMs.
+          </p>
+          <div class="links">
+            <a href="https://arxiv.org/abs/2510.11742" target="_blank" rel="noopener">arxiv.org/abs/2510.11742</a>
+            <a href="https://github.com/RinDig/AuditEngine" target="_blank" rel="noopener">github.com/RinDig/AuditEngine</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Credibility strip -->
+      <div class="cred-strip">
+        <p style="margin:0;" lang-es>
+          Eduba ha entrenado a <strong>más de 1,500 personas</strong> en empresas como
+          Pacific Life y Colgate-Palmolive desde mayo de 2025, con <strong>95% de adopción
+          a los 30 días</strong>. Entre los clientes figura <strong>KPMG UK, una de las
+          Big Four</strong>. Para trabajo que se apoya en ingeniería de ML de producción,
+          Eduba trabaja con NLP Logix, que está en machine learning desde 2011 y opera
+          con más de 150 científicos de datos. Jake también construyó una comunidad
+          online que llegó a 22,000 miembros en cinco semanas.
+        </p>
+        <p style="margin:0;" lang-en>
+          Eduba has trained <strong>over 1,500 people</strong> at companies like Pacific
+          Life and Colgate-Palmolive since May 2025, with <strong>95% 30-day
+          adoption</strong>. Clients include <strong>KPMG UK, one of the Big Four</strong>.
+          For production ML engineering, Eduba partners with NLP Logix, which has been
+          in machine learning since 2011 and runs over 150 data scientists. Jake also
+          built an online community to 22,000 members in five weeks.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <div class="section-kicker" style="color:#9fd3ff;" lang-es>Siguiente paso</div>
+        <div class="section-kicker" style="color:#9fd3ff;" lang-en>Next step</div>
+        <h2>
+          <span lang-es>30 minutos con Matt Creamer.</span>
+          <span lang-en>30 minutes with Matt Creamer.</span>
+        </h2>
+        <p lang-es>
+          Traigan un flujo de cobranza que haga suspirar a alguien del equipo.
+          Salimos con una lectura concreta de qué parte vive en qué capa, y qué
+          pieza, si se mueve, ayuda a la narrativa del inversionista y a la del
+          auditor al mismo tiempo.
+        </p>
+        <p lang-en>
+          Bring one collections workflow that makes someone on your team groan.
+          We leave with a concrete read on which piece lives on which layer,
+          and which single move helps both the investor story and the auditor
+          at the same time.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">
+            <span lang-es>Agendar 30 min</span>
+            <span lang-en>Book 30 min</span>
+          </a>
+          <a class="btn btn-secondary" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">
+            calendly.com/thecro-eduba/30min
+          </a>
+        </div>
+
+        <p class="contact-line">
+          <span lang-es>Matt Creamer, CRO · </span>
+          <span lang-en>Matt Creamer, CRO · </span>
+          <a href="mailto:thecro@eduba.io">thecro@eduba.io</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer: Eduba branding lives here only -->
+  <footer>
+    <div class="container footer-inner">
+      <div lang-es>Preparado por Eduba · <a href="https://eduba.io" target="_blank" rel="noopener">eduba.io</a></div>
+      <div lang-en>Prepared by Eduba · <a href="https://eduba.io" target="_blank" rel="noopener">eduba.io</a> &middot; <a href="https://eduba.io/works" target="_blank" rel="noopener">More case studies</a></div>
+      <div lang-es>Esta página no es un sitio oficial de UPAGO. Está hecha para una conversación en eMerge Americas 2026.</div>
+      <div lang-en>This page is not an official UPAGO site. It is built for a conversation at eMerge Americas 2026.</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var body = document.body;
+      var btnEs = document.getElementById('btn-es');
+      var btnEn = document.getElementById('btn-en');
+
+      function apply(lang) {
+        if (lang === 'en') {
+          body.classList.add('en');
+          document.documentElement.lang = 'en';
+          btnEn.setAttribute('aria-pressed', 'true');
+          btnEs.setAttribute('aria-pressed', 'false');
+        } else {
+          body.classList.remove('en');
+          document.documentElement.lang = 'es';
+          btnEs.setAttribute('aria-pressed', 'true');
+          btnEn.setAttribute('aria-pressed', 'false');
+        }
+        try { localStorage.setItem('upago-lang', lang); } catch (e) {}
+      }
+
+      // Map inline lang-es / lang-en attributes to display behavior via CSS.
+      // Because CSS default hides [lang-en], inline <span lang-es> elements are inline by default.
+      // Blocks use .block.lang-es style in CSS; the global rule handles spans here.
+
+      btnEs.addEventListener('click', function(){ apply('es'); });
+      btnEn.addEventListener('click', function(){ apply('en'); });
+
+      var saved = null;
+      try { saved = localStorage.getItem('upago-lang'); } catch (e) {}
+      if (saved === 'en') apply('en');
+      else apply('es');
+    })();
+  </script>
+
+<footer data-eduba="footer" style="background:#0a0a0a;color:#dcdcdc;padding:36px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;border-top:1px solid #1f1f1f;margin-top:48px;">
+  <div style="max-width:1040px;margin:0 auto;">
+    <div style="display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:flex-start;">
+      <div style="min-width:240px;flex:1;">
+        <div style="margin-bottom:6px;"><a href="https://eduba.io" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:none;font-weight:800;font-size:20px;letter-spacing:-0.02em;">eduba</a></div>
+        <div style="opacity:0.85;margin-bottom:4px;">Van Clief Media LLC, dba Eduba</div>
+        <div style="opacity:0.7;">Veteran-owned AI consulting and training firm</div>
+      </div>
+      <div style="min-width:220px;flex:1;">
+        <div style="color:#ffffff;font-weight:600;margin-bottom:2px;">Matt Creamer, CRO</div>
+        <div style="margin-bottom:10px;"><a href="mailto:thecro@eduba.io" style="color:#dcdcdc;text-decoration:underline;">thecro@eduba.io</a></div>
+        <div style="opacity:0.85;">Founder: Jake Van Clief</div>
+      </div>
+      <div style="min-width:180px;flex:1;">
+        <div style="margin-bottom:4px;"><a href="https://eduba.io" target="_blank" rel="noopener" style="color:#dcdcdc;text-decoration:underline;">eduba.io</a></div>
+        <div style="opacity:0.85;">Palm Coast, FL</div>
+      </div>
+    </div>
+    <div style="margin-top:24px;padding-top:16px;border-top:1px solid #1f1f1f;opacity:0.62;font-size:12px;line-height:1.55;">
+      This site was custom-built by Eduba as a conference pitch. It is not affiliated with or operated by UPAGO.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
